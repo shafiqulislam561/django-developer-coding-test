@@ -28,7 +28,7 @@ class Product(models.Model):
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     file_path = models.URLField()
-    thumbnail = models.SmallIntegerField()
+    thumbnail = models.SmallIntegerField(default=0)
     created_at  = models.TimeField()
     updated_at = models.TimeField()
 
